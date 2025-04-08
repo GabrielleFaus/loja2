@@ -40,13 +40,13 @@
                     </div>
 
                     <div class="input-group">
-                    <label for="nome">Nome</label>
+                        <label for="nome">Nome</label>
                         <input name="nome" type="text" value="<?= $usuario['nome'] ?>" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="dataNascimento">Data de nascimento</label>
-                        <input name="dataNascimento" type="date" value="<?= $usuario['dataNascimento'] ?>">
+                        <label for="data_nascimento">Data de nascimento</label>
+                        <input name="data_nascimento" type="date" value="<?= $usuario['data_nascimento'] ?>">
                     </div>
 
                     <div class="input-group">

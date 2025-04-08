@@ -28,6 +28,7 @@
                         <td>ID</td>
                         <td>Email</td>
                         <td>Nome</td>
+                        <td>Data de nascimento</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,6 +37,7 @@
                         <td><?= $item['id'] ?></td>
                         <td><?= $item['email'] ?></td>
                         <td><?= $item['nome'] ?></td>
+                        <td><?=$item['data_nascimento']?></td>
                         <td class="table-actions">
                             <a
                                 href="<?= APP_CONSTANTS['APP_URL'] . APP_CONSTANTS['PATH_PAGES'] . 'admin/usuario.php?id=' . $item['id'] ?>">

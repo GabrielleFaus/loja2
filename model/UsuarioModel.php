@@ -29,12 +29,12 @@ class UsuarioModel {
     }
 
     public function criar($nome, $email, $dataNascimento, $cpf) {
-        $query = "INSERT INTO $this->tabela (nome, email, dataNascimento, cpf) VALUES (:nome, :email, :dataNascimento, :cpf);";
+        $query = "INSERT INTO $this->tabela (nome, email, data_nascimento, cpf) VALUES (:nome, :email, :data_nascimento, :cpf);";
     
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':dataNascimento', $dataNascimento);
+        $stmt->bindParam(':data_nascimento', $dataNascimento);
         $stmt->bindParam(':cpf', $cpf);
         $stmt->execute();
     
@@ -42,12 +42,12 @@ class UsuarioModel {
     }
 
     public function editar($usuario) {
-        $query = "UPDATE $this->tabela SET nome = :nome, email = :email, dataNascimento = :dataNascimento, cpf = :cpf WHERE id = :id;";
+        $query = "UPDATE $this->tabela SET nome = :nome, email = :email, dataNascimento = :data_nascimento, cpf = :cpf WHERE id = :id;";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $usuario["id"]);
         $stmt->bindParam(":nome", $usuario["nome"]);
         $stmt->bindParam(":email", $usuario["email"]);
-        $stmt->bindParam(":dataNascimento", $usuario["dataNascimento"]);
+        $stmt->bindParam(":data_nascimento", $usuario["data_nascimento"]);
         $stmt->bindParam(":cpf", $usuario["cpf"]);
         $stmt->execute();
         return $stmt->rowCount() > 0;
