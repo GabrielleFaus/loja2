@@ -14,10 +14,9 @@
             'email'=> '',
             'nome'=> '',
             'cpf'=> '',
-            'dataNascimento'=> '',
+            'data_nascimento'=> '',
         ];
     }
-
 ?>
 
 <?php require_once __DIR__ . '/../../components/head.php'; ?>
@@ -30,7 +29,7 @@
         <h3>Usuários >> <?= $modo == 'EDICAO' ? 'Editar ' . $usuario['id'] : 'Criar' ?></h3>
 
         <div class="container">
-            <form class="form" method="POST" action="">
+            <form class="form" method="POST" action="usuarios.php">
                 <div class="form-content">
                     <input type="hidden" name="id" value="<?= $usuario['id'] ?>">
 
@@ -61,7 +60,7 @@
                             Cancelar
                         </button>
                     </a>
-                    <button class="btn btn-primary">Salvar</button>
+                    <button class="btn btn-primary" type="submit">Salvar</button>
                 </div>
             </form>
         </div>
